@@ -7,10 +7,10 @@ void ganhador_float (char name[50],float first,float second);
 */
 int opcao_1 = 0; 
 int opcao_2 = 0;
-float escolha_1_1;
-float escolha_1_2;
-float escolha_2_1;
-float escolha_2_2;
+float comparacao1_carta1;
+float comparacao1_carta2;
+float comparacao2_carta1;
+float comparacao2_carta2;
 
 
 int main(){
@@ -136,8 +136,8 @@ int main(){
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         break;
     case 2:
-        escolha_1_1 = populacao_1;
-        escolha_1_2 = populacao_2;
+        comparacao1_carta1 = populacao_1;
+        comparacao1_carta2 = populacao_2;
 
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         printf("POPULACAO\n\n");
@@ -151,8 +151,8 @@ int main(){
         }
         break;
     case 3:
-        escolha_1_1 = area_1;
-        escolha_1_2 = area_2;
+        comparacao1_carta1 = area_1;
+        comparacao1_carta2 = area_2;
 
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         printf("AREA\n\n");
@@ -166,8 +166,8 @@ int main(){
         }
         break;
     case 4:
-        escolha_1_1 = PIB_1;
-        escolha_1_2 = PIB_2;
+        comparacao1_carta1 = PIB_1;
+        comparacao1_carta2 = PIB_2;
 
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         printf("PIB\n\n");
@@ -181,8 +181,8 @@ int main(){
         }
         break;
     case 5:
-        escolha_1_1 = numero_de_pontos_turisticos_1;
-        escolha_1_2 = numero_de_pontos_turisticos_2;
+        comparacao1_carta1 = numero_de_pontos_turisticos_1;
+        comparacao1_carta2 = numero_de_pontos_turisticos_2;
 
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         printf("PONTOS TURISTICOS\n\n");
@@ -196,8 +196,8 @@ int main(){
         }
         break;
     case 6:
-        escolha_1_1 = densidade_populacional_1;
-        escolha_1_2 = densidade_populacional_2;
+        comparacao1_carta1 = densidade_populacional_1;
+        comparacao1_carta2 = densidade_populacional_2;
 
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         printf("DENSIDADE POPULACIONAL\n\n");
@@ -223,8 +223,8 @@ int main(){
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         break;
     case 2:
-        escolha_2_1 = populacao_1;
-        escolha_2_2 = populacao_2;
+        comparacao2_carta1 = populacao_1;
+        comparacao2_carta2 = populacao_2;
 
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         printf("POPULACAO\n\n");
@@ -238,8 +238,8 @@ int main(){
         }
         break;
     case 3:
-        escolha_2_1 = area_1;
-        escolha_2_2 = area_2;
+        comparacao2_carta1 = area_1;
+        comparacao2_carta2 = area_2;
 
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         printf("AREA\n\n");
@@ -253,8 +253,8 @@ int main(){
         }
         break;
     case 4:
-        escolha_2_1 = PIB_1;
-        escolha_2_2 = PIB_2;
+        comparacao2_carta1 = PIB_1;
+        comparacao2_carta2 = PIB_2;
 
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         printf("PIB\n\n");
@@ -268,8 +268,8 @@ int main(){
         }
         break;
     case 5:
-        escolha_2_1 = numero_de_pontos_turisticos_1;
-        escolha_2_2 = numero_de_pontos_turisticos_2;
+        comparacao2_carta1 = numero_de_pontos_turisticos_1;
+        comparacao2_carta2 = numero_de_pontos_turisticos_2;
 
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         printf("PONTOS TURISTICOS\n\n");
@@ -283,8 +283,8 @@ int main(){
         }
         break;
     case 6:
-        escolha_2_1 = densidade_populacional_1;
-        escolha_2_2 = densidade_populacional_2;
+        comparacao2_carta1 = densidade_populacional_1;
+        comparacao2_carta2 = densidade_populacional_2;
 
         printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
         printf("DENSIDADE POPULACIONAL\n\n");
@@ -303,13 +303,22 @@ int main(){
     }
     printf("\n_______________________________________________________________________________________\n");
     
+    //soma das escolhas
     if (!((opcao_1==0 || opcao_1>6)||(opcao_2==0 || opcao_2>6)))
     {
     int soma_1 = 0;
     int soma_2 = 0;
-    soma_1 = escolha_1_1 + escolha_2_1;
-    soma_2 = escolha_1_2 + escolha_2_2;
+    if (opcao_1 == 6){
+        soma_1 = comparacao2_carta1 - comparacao1_carta1;
+        soma_2 = comparacao2_carta2 - comparacao1_carta2;
+    }else if (opcao_2 == 6){
+            soma_1 = comparacao1_carta1 - comparacao2_carta1;
+            soma_2 = comparacao1_carta2 - comparacao2_carta2;
 
+    }else{
+        soma_1 = comparacao1_carta1 + comparacao2_carta1;
+        soma_2 = comparacao1_carta2 + comparacao2_carta2;
+    }
 
     printf("%s x %s\n",nome_da_cidade_1,nome_da_cidade_2);
     printf("SOMA DAS ESCOLHAS\n\n");
