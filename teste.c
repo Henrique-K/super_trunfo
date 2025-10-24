@@ -1,12 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    char mytext[]="hello";
-    printf("%s \n", mytext);
-
-    int end2 = 1;
-    scanf("%d",&end2);
-
-
+    unsigned long long int max = 18446744073709551615;
+    printf("\n\n %llu \n\n",max);
     return 0;
 }

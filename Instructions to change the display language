@@ -1,0 +1,13 @@
+Instructions to change the display language
+
+1.Open the Command Palette.
+On Windows/Linux, press Ctrl + Shift + P.
+On macOS, press Cmd + Shift + P.
+
+2.In the Command Palette, type Configure Display Language.
+
+3.Select the Configure Display Language command from the list.
+
+4.Choose your desired language from the list of locales. For example, select en for English.
+
+After you select the language, VS Code will prompt you to restart to apply the change. Accept the prompt, and the editor will reload in your chosen language. 
