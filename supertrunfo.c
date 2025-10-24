@@ -38,7 +38,9 @@ int main(){
     double densidade_populacional_2 = 0;
     float PIB_per_capita_2 = 0;
     float super_poder_2 = 0;
-
+    
+    printf("Bem-vindo ao jogo super trunfo\nCompare cidades e veja qual e a melhor\n");
+    printf("Preencha com as informacoes\n");
     //coleta de informacoes da primeira carta
     //na coleta de informacoes o scanf no terminal nao finalizava no enter quando o "\n" estava no final do printf.
     printf("\n________________________________________________________________________________________\n"); 
@@ -121,7 +123,9 @@ int main(){
     printf("Digite 4 se voce quiser fazer a comparacao do PIB das cartas\n");
     printf("Digite 5 se voce quiser fazer a comparacao dos pontos turisticos das cartas\n");
     printf("Digite 6 se voce quiser fazer a comparacao da densidade populacional das cartas\n");
+    printf("Primeira comparacao: ");
     scanf(" %d",&opcao_1);
+    printf("Segunda comparacao: ");
     scanf(" %d",&opcao_2);
     if(opcao_1==opcao_2){
         opcao_1=10;
@@ -303,7 +307,7 @@ int main(){
     }
     printf("\n_______________________________________________________________________________________\n");
     
-    //soma das escolhas
+    //soma das escolhas que nao soma duas opcoes iguais.
     if (!((opcao_1==0 || opcao_1>6)||(opcao_2==0 || opcao_2>6)))
     {
     int soma_1 = 0;
