@@ -38,7 +38,7 @@ int main(){
     double densidade_populacional_2 = 0;
     float PIB_per_capita_2 = 0;
     float super_poder_2 = 0;
-/*
+
     //coleta de informacoes da primeira carta
     //na coleta de informacoes o scanf no terminal nao finalizava no enter quando o "\n" estava no final do printf.
     printf("\n________________________________________________________________________________________\n"); 
@@ -111,7 +111,7 @@ int main(){
     printf("PIB per capita: %.2f\n", PIB_per_capita_2);
     printf("Super poder: %.2f", super_poder_2);
     printf("\n_______________________________________________________________________________________\n");
-    */
+    
     //menu interativo
     printf("\n_______________________________________________________________________________________\n");
     printf("Escolha duas opcoes diferentes para comparar\n");
@@ -125,7 +125,7 @@ int main(){
     scanf(" %d",&opcao_2);
     if(opcao_1==opcao_2){
         opcao_1=10;
-        opcao_2=10;
+        opcao_2=11;
     }
     printf("\n_______________________________________________________________________________________\n");
     
@@ -301,6 +301,10 @@ int main(){
         printf("\nESCOLHA UM NUMERO VALIDO\n");
         break;
     }
+    printf("\n_______________________________________________________________________________________\n");
+    
+    if (!((opcao_1==0 || opcao_1>6)||(opcao_2==0 || opcao_2>6)))
+    {
     int soma_1 = 0;
     int soma_2 = 0;
     soma_1 = escolha_1_1 + escolha_2_1;
@@ -314,10 +318,11 @@ int main(){
     }else if(soma_1<soma_2){
         printf("%s VENCEU A RODADA\n",nome_da_cidade_2);
     }else {printf("As cartas empataram\n");
-    }    
-
-
+    }
     printf("\n_______________________________________________________________________________________\n");
+    
+    }
+
     return 0;
 }
 
